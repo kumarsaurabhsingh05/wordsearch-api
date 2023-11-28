@@ -88,11 +88,6 @@ public class WordGridService {
         return contents;
     }
 
-    public void displayGrid(char[][] contents) {
-
-    }
-
-
     private void randomFillGrid(char[][] contents) {
         int gridSize = contents[0].length;
         String allCapLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

@@ -589,7 +589,7 @@ submitWordBtn.addEventListener("click", async ()=>{
     wordListSection.appendChild(wordListNode);
 });
 async function fetchGridInfo(gridSize, commaSeperatedWords) {
-    let response = await fetch(`http://localhost:8080/wordgrid?gridSize=${gridSize}&wordList=${commaSeperatedWords}`);
+    let response = await fetch(`./wordgrid?gridSize=${gridSize}&wordList=${commaSeperatedWords}`);
     let result = await response.text();
     // result = result.replace(/\r\n/g, "");
     return result.split(" ");

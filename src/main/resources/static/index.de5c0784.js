@@ -9,7 +9,7 @@ submitWordBtn.addEventListener("click", async ()=>{
 });
 async function fetchGridInfo(wordList) {
     const commaSeperatedWords = wordList.join(",");
-    let response = await fetch(`http://localhost:8080/wordgrid?gridSize=15&wordList=${commaSeperatedWords}`);
+    let response = await fetch(`./wordgrid?gridSize=15&wordList=${commaSeperatedWords}`);
     let result = await response.text();
     result = result.replace(/\r\n/g, "");
     return result.split(" ");

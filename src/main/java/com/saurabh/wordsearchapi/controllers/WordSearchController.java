@@ -14,7 +14,7 @@ public class WordSearchController {
     private WordGridService wordGridService;
 
     @GetMapping("/wordgrid")
-    @CrossOrigin(origins = "http://localhost:1234")
+//    @CrossOrigin(origins = "http://localhost:1234")
     public String createWordGrid(@RequestParam int gridSize, @RequestParam String wordList) {
         List<String> words = Arrays.asList(wordList.split(","));
         char[][] grid = wordGridService.generateGrid(gridSize, words);
@@ -29,5 +29,4 @@ public class WordSearchController {
         }
         return gridToString;
     }
-
 }
